@@ -2,14 +2,7 @@
 
 const sortArray = (array) => {
   const sortedOdds = array.filter((val) => val % 2 !== 0).sort((a, b) => a - b)
-  const evens = array.filter((val) => val % 2 === 0)
-
-  array = array.map((val) => (val % 2 === 0 ? (val = true) : (val = false)))
-  array = array.map((val) =>
-    val ? (val = evens.shift()) : (val = sortedOdds.shift())
-  )
-
-  return array
+  return array.map((val) => (val % 2 === 0 ? val : sortedOdds.shift()))
 }
 
 sortArray([7, 1]) // ->  [1, 7]
