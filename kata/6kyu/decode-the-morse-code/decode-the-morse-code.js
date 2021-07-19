@@ -58,17 +58,9 @@ const MORSE_CODE = {
 }
 
 const decodeMorse = (morseCode) => {
-  return morseCode
-    .split('   ')
-    .map((word) =>
-      word
-        .split(' ')
-        .map((letter) => {
-          return MORSE_CODE[letter]
-        })
-        .join('')
-    )
-    .join(' ')
+  return morseCode.split('   ').map(word => word.split(' ').map(letter => {
+    return MORSE_CODE[letter]
+  }).join('')).join(' ').trim()
 }
 
 decodeMorse('.... . -.--   .--- ..- -.. .') // -> 'HEY JUDE'
