@@ -8,6 +8,7 @@ function drawLines(points) {
   ctx.strokeStyle = '#ff0000'
   ctx.beginPath()
 
+  ctx.moveTo(...points.shift())
   points.forEach(([x, y]) => ctx.lineTo(x, y))
 
   ctx.stroke()
