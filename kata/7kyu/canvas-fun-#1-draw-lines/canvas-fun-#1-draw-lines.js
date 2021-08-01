@@ -8,7 +8,7 @@ function drawLines(points) {
   ctx.strokeStyle = '#ff0000'
   ctx.beginPath()
 
-  points.forEach((point) => ctx.lineTo(point[0], point[1]))
+  points.forEach(([x, y]) => ctx.lineTo(x, y))
 
   ctx.stroke()
   return canvas.toDataURL()
