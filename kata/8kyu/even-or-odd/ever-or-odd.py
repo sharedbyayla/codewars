@@ -1,10 +1,10 @@
 # https://www.codewars.com/kata/53da3dbb4a5168369a0000fe
 
 def even_or_odd(number):
-	if number / 2 == number // 2:
-		return 'Even'
-	else:
+	if number % 2:
 		return 'Odd'
+	else:
+		return 'Even'
 
 
 even_or_odd(2) # "Even"
